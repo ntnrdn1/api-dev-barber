@@ -13,7 +13,7 @@ class AlterAppointmentTable extends Migration
      */
     public function up()
     {
-        Schema::table('userappointments', function(Blueprint $table) {
+        Schema::table('usersappointments', function(Blueprint $table) {
             $table->integer('id_service')->after('id_barber');
         });
     }
@@ -25,7 +25,7 @@ class AlterAppointmentTable extends Migration
      */
     public function down()
     {
-        Schema::table('userappointments', function(Blueprint $table) {
+        Schema::table('usersappointments', function(Blueprint $table) {
             $table->dropColumn('id_service');
         });
     }
